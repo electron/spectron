@@ -212,7 +212,10 @@ Spectron uses [WebdriverIO](http://webdriver.io) and exposes the managed
 `client` property on the created `Application` instances.
 
 The `client` API is WebdriverIO's `browser` object. Documentation can be found
-[here](http://webdriver.io/api.html).
+[here](http://v4.webdriver.io/api.html).
+
+> You should look at the [v4.x WebdriverIO document](http://v4.webdriver.io/api.html). <br>
+The latest version of WebdriverIO is not v4, but Spectron is currently using v4.x. 
 
 Several additional commands are provided specific to Electron.
 
