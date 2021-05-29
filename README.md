@@ -291,6 +291,8 @@ app.webContents.isLoading().then(function (visible) {
 })
 ```
 
+Note that webContents is not available when electron is running in development mode.
+
 ##### savePage
 
 The async `savePage` API is supported but instead of taking a callback it
