@@ -208,11 +208,11 @@ property which do not require Node integration.
 
 #### client
 
-Spectron uses [WebdriverIO](http://webdriver.io) and exposes the managed
+Spectron uses [WebdriverIO](https://webdriver.io) and exposes the managed
 `client` property on the created `Application` instances.
 
 The `client` API is WebdriverIO's `browser` object. Documentation can be found
-[here](http://webdriver.io/api.html).
+[here](https://webdriver.io/docs/api).
 
 Several additional commands are provided specific to Electron.
 
@@ -221,8 +221,10 @@ All the commands return a `Promise`.
 So if you wanted to get the text of an element you would do:
 
 ```js
-app.client.getText('#error-alert').then(function (errorText) {
-  console.log('The #error-alert text content is ' + errorText)
+app.client.$('#error-alert').then(function (element) {
+  element.getText().then(function (errorText) {
+    console.log('The #error-alert text content is ' + errorText)
+  })
 })
 ```
 
@@ -239,9 +241,8 @@ API in your tests you would do:
 
 ```js
 app.electron.clipboard.writeText('pasta')
-   .electron.clipboard.readText().then(function (clipboardText) {
-     console.log('The clipboard text is ' + clipboardText)
-   })
+const clipboardText = app.electron.clipboard.readText()
+console.log('The clipboard text is ' + clipboardText)
 ```
 
 #### browserWindow
@@ -651,7 +652,7 @@ test.afterEach(t => {
   return t.context.app.stop();
 });
 
-test(t => {
+test('opens a window', t => {
   return t.context.app.client.waitUntilWindowLoaded()
     .getWindowCount().then(count => {
       t.is(count, 1);
@@ -688,7 +689,7 @@ test.afterEach.always(async t => {
   await t.context.app.stop();
 });
 
-test(async t => {
+test('example', async t => {
   const app = t.context.app;
   await app.client.waitUntilWindowLoaded();
 
