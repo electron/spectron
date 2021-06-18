@@ -37,7 +37,7 @@ For given versions of Electron you must depend on a very specific version range 
 
 Learn more from [this presentation](https://speakerdeck.com/kevinsawicki/testing-your-electron-apps-with-chromedriver).
 
-:rotating_light: Upgrading from `1.x` to `2.x`/`3.x`? Read the [changelog](https://github.com/electron/spectron/blob/master/CHANGELOG.md).
+:rotating_light: Upgrading from `1.x` to `2.x`/`3.x`? Read the [changelog](https://github.com/electron/spectron/blob/main/CHANGELOG.md).
 
 ## Installation
 
@@ -556,7 +556,7 @@ before_script:
   - sleep 3 # give xvfb some time to start
 ```
 
-Check out Spectron's [.travis.yml](https://github.com/electron/spectron/blob/master/.travis.yml)
+Check out Spectron's [.travis.yml](https://github.com/electron/spectron/blob/main/.travis.yml)
 file for a production example.
 
 ### On AppVeyor
@@ -567,7 +567,7 @@ You will want to add the following to your `appveyor.yml` file:
 os: unstable
 ```
 
-Check out Spectron's [appveyor.yml](https://github.com/electron/spectron/blob/master/appveyor.yml)
+Check out Spectron's [appveyor.yml](https://github.com/electron/spectron/blob/main/appveyor.yml)
 file for a production example.
 
 
