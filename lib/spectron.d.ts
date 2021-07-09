@@ -224,6 +224,10 @@ declare module 'spectron' {
      * and assigns it to another property name on window.
      */
     requireName?: string;
+    /**
+     * W3C Compliance - Chrome Options
+     */
+    w3c?: boolean;
   };
   type AppConstructorOptions = BasicAppSettings & {
     /**
