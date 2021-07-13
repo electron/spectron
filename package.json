@@ -31,7 +31,7 @@
     "electron-chromedriver": "^13.0.0",
     "got": "^11.8.0",
     "split": "^1.0.1",
-    "webdriverio": "^6.9.1"
+    "webdriverio": "^7.7.5"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.8.2",
